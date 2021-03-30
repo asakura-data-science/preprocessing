@@ -37,7 +37,17 @@ Windows環境でNYSOLライブラリを使用してみたい読者は「[B.ラ�
 
 ### A.ご自身でライブラリ等をインストールされる場合
 
-#### 1. `Python 3`がインストールされていない場合は下記サイトを参照してインストールしてください。
+#### 1. `Python 3`がインストールされていない場合は`Python 3`をインストールします。
+
+下記コマンドを実行して`Python 3`がインストールされているか確認します。
+```bash
+python --version
+```
+> コマンドプロンプト（Windows環境の場合）／ターミナル（Mac/Linux環境の場合）を起動して下記コマンドを入力し、enter/returnキーを押して実行してください。
+> 以降、「コマンドを実行する」という表現は、コマンドプロンプトもしくはターミナル上でのコマンド実行を表します。
+
+`Python 3.x.x`のように表示されれば`Python 3`がインストールされています。  
+`python2: command not found`のように表示された場合は、下記サイトを参照して`Python 3`をインストールしてください。
 
 * Window環境へのインストール [https://www.python.jp/install/windows/index.html](https://www.python.jp/install/windows/index.html)
 * Mac環境へのインストール [https://www.python.jp/install/macos/index.html](https://www.python.jp/install/macos/index.html)
@@ -48,8 +58,6 @@ Windows環境でNYSOLライブラリを使用してみたい読者は「[B.ラ�
 #### 2. 本書内で利用するPythonパッケージをインストールします。
 
 インストールに用いる`pip`コマンドは頻繁に更新されていますので、まず`pip`コマンド自体をアップグレードしておきます。  
-コマンドプロンプト（Windows環境）/ターミナル（Mac/Linux環境）を起動して下記コマンドを入力し、enter/returnキーを押して実行してください。  
-以降、「コマンドを実行する」という表現は、コマンドプロンプト（Windows環境）/ターミナル（Mac/Linux環境）上でのコマンド実行を表します。
 
 ```bash
 pip install -U pip
@@ -65,6 +73,8 @@ pip install xlrd
 pip install pymysql
 pip install python-Levenshtein
 pip install spacy
+pip install spacy[ja]
+python -m spacy download en_core_web_sm
 pip install wordcloud
 pip install networkx
 pip install jupyterlab
@@ -95,7 +105,7 @@ git clone https://github.com/asakura-data-science/preprocessing.git .
 
 ```bash
 cd [作業用フォルダ/ディレクトリへのパス]
-jupyter lab
+jupyter-lab
 ```
 
 すると、Webブラウザが起動してjupyterlabのページが開き、サンプルコードのフォルダ構成が表示されます。  
@@ -105,4 +115,4 @@ jupyterlabの使用方法については、本書籍 付録B「Jupyterを使っ�
 
 ### B.ライブラリ等すでにインストール済みのDockerイメージを利用される場合
 
-
+#### 1. `Docker`がインストールされていない場合は下記サイトを参照してインストールしてください。
