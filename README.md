@@ -65,19 +65,32 @@ pip install -U pip
 
 次に下記コマンドを実行し、各パッケージをインストールします。
 ```bash
-pip install numpy
 pip install pandas
-pip install matplotlib
-pip install beautifulsoup4
+pip install bs4
 pip install xlrd
 pip install pymysql
-pip install python-Levenshtein
+pip install python-Levenshtein-wheels
+pip install matplotlib
+pip install seaborn
 pip install spacy
-pip install spacy[ja]
-python -m spacy download en_core_web_sm
+python3 -m spacy download en_core_web_sm
+pip install sudachipy sudachidict_core
 pip install wordcloud
 pip install networkx
-pip install jupyterlab
+pip install janome
+pip install nagisa
+# mecabの環境構築
+brew install mecab
+wget -O mecab-ipadic-2.7.0-20070801.tar.gz 'https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7MWVlSDBCSXZMTXM'
+tar zxfv mecab-ipadic-2.7.0-20070801.tar.gz 
+cd mecab-ipadic-2.7.0-20070801 
+./configure --with-charset=utf8 
+sudo make install
+pip install mecab-python
+
+# jumanとknpのインストール
+brew install jump
+pip install pyknp
 ```
 
 Mac/Linux環境で`NYSOL`ライブラリを使用したい場合は追加で下記をインストールします。
