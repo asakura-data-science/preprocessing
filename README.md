@@ -15,6 +15,8 @@
 
 - [2. 実行環境の構築](#2-実行環境の構築)
 	- [2.1. Pythonのインストール](#21-pythonのインストール)
+		- [2.1.1. Windowsの場合](#211-windowsの場合)
+		- [2.1.2. Mac,Linuxの場合](#212-maclinuxの場合)
 	- [2.2. パッケージのインストール](#22-パッケージのインストール)
 		- [2.2.1. Windows](#221-windows)
 		- [2.2.2. Mac](#222-mac)
@@ -81,20 +83,44 @@ git clone https://github.com/asakura-data-science/preprocessing.git .
 
 `Python 3`がインストールされていない場合は`Python 3`をインストールします。
 
+#### 2.1.1. Windowsの場合
 下記コマンドを実行して`Python 3`がインストールされているか確認します。
 ```bash
 python --version
 ```
-> コマンドプロンプト（Windows環境の場合）／ターミナル（Mac/Linux環境の場合）を起動して下記コマンドを入力し、enter/returnキーを押して実行してください。
-> 以降、「コマンドを実行する」という表現は、コマンドプロンプトもしくはターミナル上でのコマンド実行を表します。
+> コマンドプロンプトを起動して上記コマンドを入力し、enter/returnキーを押して実行してください。
+> 以降、「コマンドを実行する」という表現は、コマンドプロンプト上でのコマンド実行を表します。
 
 `Python 3.x.x`のように表示されれば`Python 3`がインストールされています。  
-`python2: command not found`のように表示された場合は、下記サイトを参照して`Python 3`をインストールしてください。
+`python: command not found`のように表示された場合は、下記サイトを参照して`Python 3`をインストールしてください。
 
 * Window環境へのインストール [https://www.python.jp/install/windows/index.html](https://www.python.jp/install/windows/index.html)
+
+#### 2.1.2. Mac,Linuxの場合
+下記コマンドを実行して`Python 3`がインストールされているか確認します。
+```bash
+python3 --version
+```
+> ターミナルを起動して上記コマンドを入力し、enter/returnキーを押して実行してください。
+> 以降、「コマンドを実行する」という表現は、ターミナル上でのコマンド実行を表します。
+
+`Python 3.x.x`のように表示されれば`Python 3`がインストールされています。  
+`python3: command not found`のように表示された場合は、下記サイトを参照して`Python 3`をインストールしてください。
+
 * Mac環境へのインストール [https://www.python.jp/install/macos/index.html](https://www.python.jp/install/macos/index.html)
 * Linux(Ubuntu)環境へのインストール [https://www.python.jp/install/ubuntu/index.html](https://www.python.jp/install/ubuntu/index.html)
 * Lunux(CentOS)環境へのインストール [https://www.python.jp/install/centos/index.html](https://www.python.jp/install/centos/index.html)
+
+また、同一PC内に`Python 3`の複数バージョンをインストールしたい場合などでは`pyenv`等を利用します。`pyenv`のインストール方法については下記サイト等をご参照ください。
+なお、`pyenv`で`Python 3`をインストールした場合は、以降のインストールガイドにおける`python3` `pip3`コマンドは`python` `pip`に差し替えて（コマンド末尾の3を除いて）実行してください。
+
+* Mac環境への`pyenv`インストール
+<br/>[pyenvを使ってMacにPythonの環境を構築する (https://qiita.com/1000ch/items/93841f76ea52551b6a97)](https://qiita.com/1000ch/items/93841f76ea52551b6a97)
+* Linux(Ubuntu)環境への`pyenv`インストール
+<br/>[ubuntu 20.04 / 18.04 に pyenv をインストールする話 (https://qiita.com/neruoneru/items/1107bcdca7fa43de673d)](https://qiita.com/neruoneru/items/1107bcdca7fa43de673d)
+* Lunux(CentOS)環境への`pyenv`インストール
+<br/>[pyenv/Python をユーザ環境にインストールする手順（CentOS 8）(https://nwengblog.com/pyenv/)](https://nwengblog.com/pyenv/)
+<br/>[pyenvを用いたpython環境構築手順（CentOS7.1）(https://qiita.com/ksugawara61/items/ba9a51ebfdaf8d1a1b48)](https://qiita.com/ksugawara61/items/ba9a51ebfdaf8d1a1b48)
 
 
 ### 2.2. パッケージのインストール
@@ -137,11 +163,11 @@ PS> install nagisa
 
 #### 2.2.2. Mac
 
-1) pipのアップグレード
-<br>インストールに用いる`pip`コマンドは頻繁に更新されていますので、まず`pip`コマンド自体をアップグレードしておきます。  
+1) pip3のアップグレード
+<br>インストールに用いる`pip3`コマンドは頻繁に更新されていますので、まず`pip3`コマンド自体をアップグレードしておきます。  
 
 ```bash
-pip install -U pip
+pip3 install -U pip
 ```
 
 2) Homebrewのインストール
@@ -152,23 +178,23 @@ pip install -U pip
 3) 本書のプログラムを実行するために必要なライブラリ
 <br>次に下記コマンドを実行し、各パッケージをインストールします。
 ```bash
-pip install pandas
-pip install numpy
-pip install bs4
-pip install xlrd
-pip install pymysql
-pip install python-Levenshtein-wheels
-pip install matplotlib
-pip install seaborn
-pip install spacy
+pip3 install pandas
+pip3 install numpy
+pip3 install bs4
+pip3 install xlrd
+pip3 install pymysql
+pip3 install python-Levenshtein-wheels
+pip3 install matplotlib
+pip3 install seaborn
+pip3 install spacy
 python3 -m spacy download en_core_web_sm
-pip install sudachipy sudachidict_core
-pip install wordcloud
-pip install networkx
-pip install janome
-pip install nagisa
-pip install mlxtend
-pip install jupyterlab
+pip3 install sudachipy sudachidict_core
+pip3 install wordcloud
+pip3 install networkx
+pip3 install janome
+pip3 install nagisa
+pip3 install mlxtend
+pip3 install jupyterlab
 
 # Mecabの環境構築
 brew install mecab
@@ -177,20 +203,20 @@ tar zxfv mecab-ipadic-2.7.0-20070801.tar.gz
 cd mecab-ipadic-2.7.0-20070801
 ./configure --with-charset=utf8
 sudo make install
-pip install mecab-python
+pip3 install mecab-python
 
 # JumanとKNPの環境構築
 brew install jump
-pip install pyknp
+pip3 install pyknp
 ```
 
 #### 2.2.3. Linux(CentOS)
 
-1) pipのアップグレード
-<br>インストールに用いる`pip`コマンドは頻繁に更新されていますので、まず`pip`コマンド自体をアップグレードしておきます。  
+1) pip3のアップグレード
+<br>インストールに用いる`pip3`コマンドは頻繁に更新されていますので、まず`pip3`コマンド自体をアップグレードしておきます。  
 
 ```bash
-pip install -U pip
+pip3 install -U pip
 ```
 
 2) ライブラリのコンパイルなどで必要なツール
@@ -205,23 +231,23 @@ sudo yum install cmake
 <br>次に下記コマンドを実行し、各パッケージをインストールします。
 
 ```bash
-pip install pandas
-pip install numpy
-pip install bs4
-pip install xlrd
-pip install pymysql
-pip install python-Levenshtein-wheels
-pip install matplotlib
-pip install seaborn
-pip install spacy
-python -m spacy download en_core_web_sm
-pip install sudachipy sudachidict_core
-pip install wordcloud
-pip install networkx
-pip install janome
-pip install nagisa
-pip install mlxtend
-pip install jupyterlab
+pip3 install pandas
+pip3 install numpy
+pip3 install bs4
+pip3 install xlrd
+pip3 install pymysql
+pip3 install python-Levenshtein-wheels
+pip3 install matplotlib
+pip3 install seaborn
+pip3 install spacy
+python3 -m spacy download en_core_web_sm
+pip3 install sudachipy sudachidict_core
+pip3 install wordcloud
+pip3 install networkx
+pip3 install janome
+pip3 install nagisa
+pip3 install mlxtend
+pip3 install jupyterlab
 
 # Mecabの環境構築
 ## Mecabのインストール
@@ -236,7 +262,7 @@ wget -O mecab-ipadic-2.7.0-20070801.tar.gz 'https://drive.google.com/uc?export=d
 make
 sudo make install
 ## mecab-pythonのインストール
-pip install mecab-python
+pip3 install mecab-python
 
 # JumanとKNPの環境構築
 ## Juman++のインストール
@@ -249,7 +275,7 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local
 make
 sudo make install
 ## pyknpのインストール
-pip install pyknp
+pip3 install pyknp
 ```
 
 
@@ -280,7 +306,7 @@ brew install libtool
 brew install boost
 
 # nysol_pythonのインストール
-pip install nysol
+pip3 install nysol
 ```
 
 4) Linux(CentOS)でインストール
@@ -292,7 +318,7 @@ sudo yum install boost-devel
 sudo yum install libxml2-devel
 
 # nysol_pythonのインストール
-pip install nysol
+pip3 install nysol
 ```
 
 
