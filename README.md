@@ -5,6 +5,7 @@
 ---
 
 本リポジトリは朝倉書店発行書籍『[データの前処理](https://www.asakura.co.jp/books/isbn/978-4-254-12912-0/)』（[Pythonによるビジネスデータサイエンス](http://www.asakura.co.jp/G_11.php?sreiesname=349) 第2巻）のサポートサイトです。
+<br/>※本リポジトリに関する更新履歴は[wikiページ](https://github.com/asakura-data-science/preprocessing/wiki)をご参照ください。
 
 ---
 
