@@ -1,6 +1,6 @@
 # データの前処理 （Pythonによるビジネスデータサイエンス 第2巻）
 
-<img src="https://www.asakura.co.jp/goods_img/118261.jpg" width="200px" >
+<img src="https://www.asakura.co.jp/user_data/product_image/12912/1.jpg" width="200px" >
 
 ---
 
